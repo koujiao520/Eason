@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">IU</string>
+    <string name="main">Eason</string>
+    <string name="hello">This is IU APP</string>
+    <string name="personal">个人信息</string>
+    <string name="askUp">确定撰写文章</string>
+    <string name="up">新建</string>
+    <string name="delete">删除</string>
+    <string name="camera">拍摄</string>
+    <string name="call">Call</string>
+    <string name="txt">文本</string>
+    <string name="chat">IM</string>
+    <string name="map">地图</string>
+    <string name="textView1">IU</string>
+    <string name="textView2">Eason</string>
+    <string name="other">其他</string>
+    <string name="setting">设置</string>
+    <string name="title">标题</string>
+    <string name="contents">内容</string>
+    <string name="success">查询成功</string>
+    <string name="loser">查询失败</string>
+    <string name="BmobAppID">f865b5dccb2e76437ec331bde634e553</string>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>

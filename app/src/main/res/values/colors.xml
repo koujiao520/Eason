@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="iu_blue">#0080FF</color>
+    <color name="iu_back">#696969</color>
+    <color name="iu_red">#FF6666</color>
+</resources>
