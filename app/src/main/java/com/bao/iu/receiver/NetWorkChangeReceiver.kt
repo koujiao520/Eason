@@ -1,4 +1,4 @@
-package com.bao.iu
+package com.bao.iu.receiver
 
 import android.content.BroadcastReceiver
 import android.content.Context

@@ -1,4 +1,4 @@
-package com.bao.iu
+package com.bao.iu.fragment.f_Article
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -13,6 +13,9 @@ import android.widget.Toast
 import cn.bmob.v3.BmobQuery
 import cn.bmob.v3.exception.BmobException
 import cn.bmob.v3.listener.FindListener
+import com.bao.iu.pojo.Article
+import com.bao.iu.adapter.ArticleAdapter
+import com.bao.iu.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_query.*
 import java.util.concurrent.TimeUnit

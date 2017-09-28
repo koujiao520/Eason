@@ -1,4 +1,4 @@
-package com.bao.iu
+package com.bao.iu.fragment.f_Article
 
 import android.app.AlertDialog
 import android.content.Context
@@ -15,6 +15,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import cn.bmob.v3.exception.BmobException
 import cn.bmob.v3.listener.UpdateListener
+import com.bao.iu.pojo.Article
+import com.bao.iu.R
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_article.*

@@ -1,15 +1,16 @@
-package com.bao.iu
+package com.bao.iu.adapter
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.FragmentManager
 import android.support.v7.widget.CardView
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import com.bao.iu.MainActivity
+import com.bao.iu.R
+import com.bao.iu.fragment.f_Article.ArticleFragment
+import com.bao.iu.pojo.Article
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.recycler_acticle.view.*
 

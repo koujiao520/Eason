@@ -1,4 +1,4 @@
-package com.bao.iu
+package com.bao.iu.fragment.f_Article
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -16,6 +16,8 @@ import cn.bmob.v3.listener.SaveListener
 import cn.bmob.v3.listener.UploadFileListener
 import cn.finalteam.galleryfinal.GalleryFinal
 import cn.finalteam.galleryfinal.model.PhotoInfo
+import com.bao.iu.pojo.Article
+import com.bao.iu.R
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_add.*
@@ -106,7 +108,7 @@ class AddFragment : Fragment(), View.OnClickListener {
             R.id.add_a_img -> {
                 GalleryFinal.openGallerySingle(CHOOSE_PHOTO, mOnHanlderResultCallback);
             }
-            R.id.add_fab,R.id.add_ok -> {
+            R.id.add_fab, R.id.add_ok -> {
                 //悬浮按钮
                 if (imgUrl == null) {
                     Toast.makeText(activity, "请选择图片", Toast.LENGTH_SHORT).show()

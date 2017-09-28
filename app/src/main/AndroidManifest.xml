@@ -34,10 +34,11 @@
         </activity>
 
         <receiver
-            android:name=".NetWorkChangeReceiver"
+            android:name=".receiver.NetWorkChangeReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true" />
 
+        <activity android:name=".WeatherActivity"></activity>
     </application>
 
 </manifest>

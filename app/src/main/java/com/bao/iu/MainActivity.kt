@@ -24,6 +24,11 @@ import cn.bmob.v3.listener.UpdateListener
 import cn.bmob.v3.listener.UploadFileListener
 import cn.finalteam.galleryfinal.GalleryFinal
 import cn.finalteam.galleryfinal.model.PhotoInfo
+import com.bao.iu.adapter.MyPageAdapter
+import com.bao.iu.fragment.f_Article.AddFragment
+import com.bao.iu.fragment.f_Article.QueryFragment
+import com.bao.iu.pojo.Article
+import com.bao.iu.receiver.NetWorkChangeReceiver
 import com.bumptech.glide.Glide
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -173,6 +178,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         //给头像设置点击事件
         imgView = View.inflate(this@MainActivity,R.layout.nav_header,myNav).img_header
         imgView?.setOnClickListener(this)
+        myVp.adapter  = MyPageAdapter(supportFragmentManager)
+        myPsts.setViewPager(myVp)
     }
 
     fun bmobThread(send: Int) {
@@ -223,11 +230,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_txt -> {
-                //放入查询碎片
-                replaceFragment(QueryFragment())
-            }
+        //放入查询碎片
+            R.id.nav_txt -> replaceFragment(QueryFragment())
             R.id.nav_map -> {
+
             }
             R.id.nav_setting -> {
             }

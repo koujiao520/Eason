@@ -1,4 +1,4 @@
-package com.bao.iu
+package com.bao.iu.pojo
 
 import cn.bmob.v3.BmobObject
 
