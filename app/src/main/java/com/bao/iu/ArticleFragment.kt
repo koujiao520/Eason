@@ -57,7 +57,7 @@ class ArticleFragment : Fragment() ,View.OnClickListener{
                     if (flagNetwork) {
                         //有网
                         var a = Article()
-                        a.status = 0
+                        a.code = 0
                         Log.i("@@@","执行删除")
                         a.update(objectId,object: UpdateListener(){
                             override fun done(e: BmobException?) {

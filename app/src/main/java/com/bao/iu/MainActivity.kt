@@ -105,7 +105,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                                 if (e == null) {
                                     var a = Article()
                                     a.imgUrl = img.url
-                                    a.status = 3
+                                    a.code = 3
                                     a.update("xOjVGGGO",object : UpdateListener() {
                                         override fun done(e1: BmobException?) {
                                             if (e1 == null) {

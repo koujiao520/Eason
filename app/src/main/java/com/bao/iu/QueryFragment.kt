@@ -49,7 +49,7 @@ class QueryFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
                    var flagNetwork = (nt != null && nt.isAvailable)
                    //Bmob查询
                    var query = BmobQuery<Article>()
-                   query.addWhereEqualTo("status",1)
+                   query.addWhereEqualTo("code",1)
                    query.order("-createdAt")
                    query.setLimit(100)
                    //有网络时可以联网缓存
