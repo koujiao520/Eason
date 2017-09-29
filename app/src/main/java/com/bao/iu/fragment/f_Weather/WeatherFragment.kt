@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bao.iu.R
+import kotlinx.android.synthetic.main.activity_main.*
 
 /**
  * Created by Administrator on 2017/9/28.
@@ -15,4 +16,5 @@ class WeatherFragment: Fragment() {
         val view = inflater?.inflate(R.layout.fragment_weather,container,false)
         return view
     }
+
 }

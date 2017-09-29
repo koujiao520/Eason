@@ -39,8 +39,6 @@ class AddFragment : Fragment(), View.OnClickListener {
         add_fab.setOnClickListener(this)
         add_ok.setOnClickListener(this)
         add_exit.setOnClickListener(this)
-        //新建悬浮按钮隐藏
-        activity.myFab.visibility = View.GONE
     }
 
     //******************************

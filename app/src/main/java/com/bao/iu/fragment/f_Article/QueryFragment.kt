@@ -39,8 +39,6 @@ class QueryFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
         //设置刷新监听器
         mySrl.setOnRefreshListener(this)
         queryThread(4)
-        //新建悬浮按钮可见
-        activity.myFab.visibility = View.VISIBLE
     }
     val handler = object: Handler(){
        override fun handleMessage(msg: Message?) {

@@ -41,8 +41,6 @@ class ArticleFragment : Fragment() ,View.OnClickListener{
         new_a_title.setText(title)
         new_a_contents.setText(contents)
         new_fab.setOnClickListener(this)
-        //新建悬浮按钮可见
-        activity.myFab.visibility = View.VISIBLE
 
     }
     var title: String? = null

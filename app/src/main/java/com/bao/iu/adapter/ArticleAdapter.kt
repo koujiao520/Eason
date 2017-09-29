@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import com.bao.iu.MainActivity
 import com.bao.iu.R
 import com.bao.iu.fragment.f_Article.ArticleFragment
+import com.bao.iu.fragment.f_Article.QueryFragment
 import com.bao.iu.pojo.Article
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.recycler_acticle.view.*
@@ -51,7 +52,7 @@ class ArticleAdapter(aList: List<Article>): RecyclerView.Adapter<ArticleAdapter.
                 arg.putString("objectId",a?.objectId)
                 var fragment = ArticleFragment()
                 fragment.arguments =arg
-                (mContext as MainActivity).replaceFragment(fragment)
+                (mContext as MainActivity).adapter?.updateFragment(null,fragment)
             }
         })
     }

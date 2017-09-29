@@ -44,8 +44,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         initViewAndListener()
         //打开广播监听器
         openReceiver()
-        //查询碎片
-        replaceFragment(QueryFragment())
         //头像
         bmobThread(5)
     }
@@ -55,12 +53,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
+    override fun onBackPressed() {
+        //重写返回方法
+        adapter?.updateFragment(null,null)
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         //注销广播监听器
         unregisterReceiver(networkChangeReceiver)
     }
-
+    var adapter: MyPageAdapter? = null
     var imgUrl: String? = null
     val CHOOSE_PHOTO = 2
     var imgView: CircleImageView? = null
@@ -178,7 +181,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         //给头像设置点击事件
         imgView = View.inflate(this@MainActivity,R.layout.nav_header,myNav).img_header
         imgView?.setOnClickListener(this)
-        myVp.adapter  = MyPageAdapter(supportFragmentManager)
+        adapter = MyPageAdapter(supportFragmentManager)
+        myVp.adapter  = adapter
         myPsts.setViewPager(myVp)
     }
 
@@ -192,16 +196,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }).start()
     }
 
-    fun replaceFragment(fragment: Fragment) {
-        //获取FragmentManager
-        val fm = supportFragmentManager
-        //开启事务
-        var transaction = fm.beginTransaction()
-        //向容器中添加Fragment
-        transaction.replace(R.id.myFl, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
-    }
+
 
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -231,7 +226,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
         //放入查询碎片
-            R.id.nav_txt -> replaceFragment(QueryFragment())
+            R.id.nav_txt -> adapter?.updateFragment(null,QueryFragment())
             R.id.nav_map -> {
 
             }
@@ -249,7 +244,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.myFab -> {
                 //提示工具 - Snackbar
                 Snackbar.make(view, R.string.askUp, Snackbar.LENGTH_SHORT).setAction(R.string.up, View.OnClickListener {
-                    replaceFragment(AddFragment())
+                    adapter?.updateFragment(null,AddFragment())
+                    myVp.currentItem = 1
                 }).show()
             }
             R.id.img_header -> {
